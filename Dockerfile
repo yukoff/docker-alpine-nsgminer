@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM yukoff/alpine-32bit:latest
 # for now VERSION is used to retrigger build, git checkouts to master
 ENV VERSION ${VERSION:-0.9.3}
 ENV HOME /nsgminer
