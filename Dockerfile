@@ -1,4 +1,7 @@
 FROM alpine:latest
+# for now VERSION is used to retrigger build, git checkouts to master
+ENV VERSION ${VERSION:-0.9.3}
+ENV HOME /nsgminer
 COPY start.sh /nsgminer/
 RUN adduser -S -D -H -h /nsgminer miner
 RUN apk --no-cache upgrade && \
